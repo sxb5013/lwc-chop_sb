@@ -1,0 +1,16 @@
+<template>
+	<div class="slds-m-horizontal_xx-small slds-m-bottom_x-small">
+		<lightning-card title={name}>
+			<lightning-layout slot="actions">
+				<lightning-layout-item>
+					<lightning-button disabled={showMeet} label="Meet Your Student" variant="brand">
+					</lightning-button>
+				</lightning-layout-item>
+				<lightning-layout-item>
+					<lightning-button disabled={showGrat} label="Message of Gratitude"></lightning-button>
+				</lightning-layout-item>
+			</lightning-layout>
+			<p class="slds-p-horizontal_small">Class of {year} | {degree}</p>
+		</lightning-card>
+	</div>
+</template>

@@ -1,0 +1,21 @@
+<template>
+	<div class="app slds-p-around_x-large">
+		<h1 class="slds-text-heading_large">{title}</h1>
+		<h3>LOREM IPSUM DI DOLOR SIT AMET SCHOLARSHIP</h3>
+		<h3>Fiscal Year 2022</h3>
+
+		<!-- Using an if statement -->
+		<template if:true={showFeatures}>
+			<div class="slds-p-top_large">
+				<h3 class="slds-text-heading_medium">Fund Financial Information</h3>
+
+				<!-- Using a for statement -->
+				<template for:each={features} for:item='feature'>
+					<c-child name={feature.name} year={feature.year} degree={feature.degree} showmeet={feature.showMeet}
+						showgrat={feature.showGrat} key={feature.name}>
+					</c-child>
+				</template>
+			</div>
+		</template>
+	</div>
+</template>
